@@ -1,0 +1,9 @@
+[submodule "BitboardReversi"]
+	path = BitboardReversi
+	url = git@github.com:tosik/BitboardReversi.git
+[submodule "BlueCarrot"]
+	path = BlueCarrot
+	url = git@github.com:tosik/BlueCarrot.git
+[submodule "BitboardCA"]
+	path = BitboardCA
+	url = git@github.com:tosik/BitboardCA.git
