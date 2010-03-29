@@ -1,0 +1,6 @@
+[submodule "BitboardCA"]
+	path = BitboardCA
+	url = git://github.com/tosik/BitboardCA.git
+[submodule "BlueCarrot"]
+	path = BlueCarrot
+	url = git://github.com/tosik/BlueCarrot.git

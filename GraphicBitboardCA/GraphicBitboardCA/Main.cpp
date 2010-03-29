@@ -29,5 +29,5 @@ SceneBase * CreateScene(SceneID scene_id)
 
 SceneID GetStartupSceneID()
 {
-	return SCENE_ID_SAMPLE;
+	return SCENE_ID_CA;
 }
