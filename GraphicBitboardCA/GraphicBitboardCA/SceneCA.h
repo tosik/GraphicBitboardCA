@@ -41,9 +41,9 @@ public:
 		, GenerationOuterTotalisticCA(100, 70, 4)
 		, m_Starwars(GetSizeX(), GetSizeY())
 	{
-		DisableAlphatest();
-		DisableAlphablending();
-		SetRect(utility::Rect<float>(0, 0, 5, 5));
+		//EnableAlphatest();
+		EnableAlphablending();
+		SetRect(utility::Rect<float>(0, 0, 8, 8));
 
 		SetInnerCAInstance(&m_Starwars);
 	}
