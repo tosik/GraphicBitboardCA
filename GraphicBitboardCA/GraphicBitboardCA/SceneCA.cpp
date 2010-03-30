@@ -11,7 +11,7 @@
 #include "utility/Type.h"
 
 
-SceneCA::SceneCA(SceneID scene_id)
+SceneCA::SceneCA(BlueCarrot::SceneID scene_id)
 	: SceneRendering(scene_id)
 {
 }
@@ -20,7 +20,7 @@ void SceneCA::Initialize()
 {
 	SceneRendering::Initialize();
 
-	graphics::Renderer * renderer = GetGlobalInstance()->GetRenderer();
+	BlueCarrot::graphics::Renderer * renderer = BlueCarrot::GetGlobalInstance()->GetRenderer();
 
 	m_CA.Randomize();
 	AddSceneEntity(&m_CA);

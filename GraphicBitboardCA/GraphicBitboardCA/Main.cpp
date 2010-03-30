@@ -8,12 +8,12 @@
 int WINAPI WinMain(HINSTANCE hThisInst, HINSTANCE hPrevInst, LPSTR lpszArgs, int nWinMode)
 {
 	// Windows 用のアプリケーションの場合は、この関数に引数をそのまま受け渡す
-	return WindowsEntryPoint(hThisInst, hPrevInst, lpszArgs, nWinMode);
+	return BlueCarrot::WindowsEntryPoint(hThisInst, hPrevInst, lpszArgs, nWinMode);
 }
 
 
 
-SceneBase * CreateScene(SceneID scene_id)
+BlueCarrot::SceneBase * BlueCarrot::callback::CreateScene(BlueCarrot::SceneID scene_id)
 {
 	switch ( scene_id )
 	{
@@ -27,12 +27,12 @@ SceneBase * CreateScene(SceneID scene_id)
 	return NULL;
 }
 
-SceneID GetStartupSceneID()
+BlueCarrot::SceneID BlueCarrot::callback::GetStartupSceneID()
 {
 	return SCENE_ID_CA;
 }
 
-utility::Size<int> GetScreenSize()
+BlueCarrot::utility::Size<int> BlueCarrot::callback::GetScreenSize()
 {
-	return utility::Size<int>(640, 480);
+	return BlueCarrot::utility::Size<int>(640, 480);
 }

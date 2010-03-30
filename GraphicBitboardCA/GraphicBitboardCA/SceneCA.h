@@ -33,7 +33,7 @@ protected:
 
 class StarwarsCA
 	: public BCA::GenerationOuterTotalisticCA
-	, public entity::SceneEntitySprite
+	, public BlueCarrot::entity::SceneEntitySprite
 {
 public:
 	StarwarsCA()
@@ -43,7 +43,7 @@ public:
 	{
 		//EnableAlphatest();
 		EnableAlphablending();
-		SetRect(utility::Rect<float>(0, 0, 8, 8));
+		SetRect(BlueCarrot::utility::Rect<float>(0, 0, 8, 8));
 
 		SetInnerCAInstance(&m_Starwars);
 	}
@@ -56,9 +56,9 @@ public:
 				std::size_t state = GetCellState(x, y);
 				if ( state > 0 )
 				{
-					utility::Color color(255, state * 50, state * 50, state * 50);
-					GetGlobalInstance()->GetRenderer()->DrawRect(
-						utility::Rect<float>(x * width, y * height, width, height),
+					BlueCarrot::utility::Color color(255, state * 50, state * 50, state * 50);
+					BlueCarrot::GetGlobalInstance()->GetRenderer()->DrawRect(
+						BlueCarrot::utility::Rect<float>(x * width, y * height, width, height),
 						GetUV(), color, GetTexture(), IsEnableAlphatest(), IsEnableAlphablending());
 				}
 			}
@@ -69,13 +69,13 @@ private:
 };
 
 class SceneCA
-	: public SceneRendering
+	: public BlueCarrot::SceneRendering
 {
 private:
 	StarwarsCA m_CA;
 
 public:
-	SceneCA(SceneID scene_id);
+	SceneCA(BlueCarrot::SceneID scene_id);
 
 	void Initialize();
 	void Finalize();
