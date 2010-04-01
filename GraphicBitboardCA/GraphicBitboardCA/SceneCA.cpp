@@ -34,7 +34,5 @@ void SceneCA::Finalize()
 void SceneCA::Update(unsigned int elapsed_time)
 {
 	SceneRendering::Update(elapsed_time);
-
-	m_CA.Step();
 }
 

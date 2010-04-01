@@ -64,6 +64,11 @@ public:
 			}
 	}
 
+	void Update(unsigned int elapsed_time)
+	{
+		Step();
+	}
+
 private:
 	InnerCAForStarwars m_Starwars;
 };
